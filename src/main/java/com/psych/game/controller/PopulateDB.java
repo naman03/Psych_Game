@@ -30,7 +30,7 @@ public class PopulateDB {
     @Autowired
     private PlayerRepository playerRepository;
 
-    @GetMapping("/add-questions-from-file")
+    @GetMapping("/add-questions-from-files")
     public void addQuestionsFromFiles() throws IOException {
         questionRepository.deleteAll();
         for (Map.Entry<String, GameMode> entry : Constants.QA_FILES.entrySet()) {
